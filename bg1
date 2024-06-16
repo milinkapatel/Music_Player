@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" lang="en-in" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en-in" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" lang="en-in" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en-in" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html lang="en-in" dir="ltr"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta name="viewport" content="width=device-width"><script type="text/javascript">
+if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;href.match(/[?&]nopostload/)||(-1==href.indexOf("?")?-1==href.indexOf("#")?document.location.href=href+"?nopostload=1":document.location.href=href.replace("#","?nopostload=1#"):-1==href.indexOf("#")?document.location.href=href+"&nopostload=1":document.location.href=href.replace("#","&nopostload=1#"))}
+</script>
+<script type="text/javascript">
+class AOLLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventListener,e.eventOptions))}_removeUserInteractionListener(e){this.triggerEvents.forEach(t=>window.removeEventListener(t,e.userEventListener,e.eventOptions))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._triggerDOMContentLoaded(),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerWindowLoad(),window.dispatchEvent(new Event("aol-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=js-postload]").forEach(e=>{e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-aol-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){return await this._requestAnimFrame(),new Promise(t=>{const n=document.createElement("script");let i;[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-aol-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))}),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)})}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach(t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}}),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"aol-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["aol"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("aol-DOMContentLoaded",()=>t.bind(document)(n))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"aol-jquery-load":e).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]})}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("aol-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("aol-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("aol-readystatechange")),await this._requestAnimFrame(),document.aolonreadystatechange&&document.aolonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("aol-load")),await this._requestAnimFrame(),window.aolonload&&window.aolonload(),await this._requestAnimFrame(),this.allJQueries.forEach(e=>e(window).trigger("aol-jquery-load")),window.dispatchEvent(new Event("aol-pageshow")),await this._requestAnimFrame(),window.aolonpageshow&&window.aolonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),a=n.parentElement;let r=e.get(n);void 0===r&&(r=n.nextSibling,e.set(n,r));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),a.insertBefore(o,r)}}async _requestAnimFrame(){return new Promise(e=>requestAnimationFrame(e))}static run(){const e=new AOLLazyLoadScripts(["load","keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}AOLLazyLoadScripts.run();
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "VideoObject",
+		  "name": "Bhole Ki Jai Jai Song | Vikram Hazra | Art Of Living Shiva Bhajan",
+		  "description": "Elevate your consciousness with energetic Shiva bhajans like Bhole Ki Jai Jai,for more Shiva bhajans for MahaShivratri, log on to: https://www.artofliving.org/mahashivratri
+
+📒 Lord Shiva is oft lovingly called Bhole or Bholenath for his simplicity and easy to appease benevolent nature. By invoking his name through the chants of Bholeki Jai Jai, one appeals to the Lord of the Kailasha, praying for his blessings and protection. Sing along with VikramHazra’s soulful tunes in prayer of the benevolent Lord Shiva to celebrate MahaShivratri.
+
+MahaShivratri is traditionally a powerful night of prayers to Shiva. It falls on the 14th night of the new moon, during the dark half of the lunar month of Phalguna, that is some time between February and March. Devotees of Shiva stay awake the entire night on this auspicious night of Shivratri. Some perform poojas, chant Vedic mantras or Rudram, and practice meditation. These sacred practices bestow a sense of peace within us and oneness with the world.
+
+🎼   Lyrics : Bhole Ki Jai Jai 
+
+Bhole ki Jai Jai Shiv ji ki jai jai
+Bhole ki jai jai shiv ji ki jai jai
+ 
+Parvati pati shiv ji ki jai jai
+Pravati pati shiv ji ki jai jai
+ 
+Bhole ki Jai Jai Shiv ji ki jai jai
+Parvati pati shiv ji ki jai jai
+
+Har Shiv Shankar Shashank Shekhar 
+Har Bum Bum Bum Bum Bhola 
+
+Bhav Bhayankar Girija Shankar 
+Dhimi Dhimi Dhimi Thaka Narthana Kelo
+Dama Dama Dama Dama Damru Baje
+Dama Dama Dama Dama Damru Baje
+
+Ghan Ghan Ghan Ghan Ghanta Baje
+Ghan Ghan Ghan Ghan Ghanta Baje
+
+Dama Dama Dama Dama Damru Baje
+Dama Dama Dama Dama Damru Baje
+
+Bholenath Shiva Shambho Bhaje
+Bholenath Shiva Shambho Bhaje
+
+Kashinath Shiva Shambho Bhaje
+Kashinath Shiva Shambho Bhaje
+
+Har Shiv Shankar Shashank Shekhar 
+Har Bum Bum Bum Bum Bhola 
+
+Bhav Bhayankar Girija Shankar 
+Dhimi Dhimi Dhimi Thaka Narthana Kelo
+
+Dama Dama Dama Dama Damru Baje
+Ghan Ghan Ghan Ghan Ghanta Baje
+
+Bholenath Shiva Shambho Bhaje
+Kashinath Shiva Shambho Bhaje
+Ghan Ghan Ghan Ghan Ghanta Baje
+Bholenath Shiva Shambho Bhaje
+Ohhhh…..Parvati pati shiv ji ki jai jai
+
+-
+
+About The Art of Living:
+Founded in 1981 by Gurudev Sri Sri Ravi Shankar, The Art of Living is an educational and humanitarian movement engaged in stress-management and service initiatives. The organization operates globally in 156 countries and has touched the lives of over 450 million people.
+
+-
+
+#MahaShivratri2021 #BholeKiJaiJai  #VikramHazra  #ArtofLIvingShivaBhajans",
+		  "thumbnailUrl": [
+			"https://i.ytimg.com/vi/aDPGwKwXKQ8/default.jpg",
+			"https://i.ytimg.com/vi/aDPGwKwXKQ8/mqdefault.jpg",
+			"https://i.ytimg.com/vi/aDPGwKwXKQ8/hqdefault.jpg"
+		   ],
+		  "uploadDate": "2017-01-18T05:01:42Z",
+		  "duration": "PT6M18S",
+		  "contentUrl": "https://youtu.be/aDPGwKwXKQ8",
+		  "embedUrl": "https://www.youtube.com/embed/aDPGwKwXKQ8",
+		  "interactionStatistic": {
+			"@type": "InteractionCounter",
+			"interactionType": { "@type": "WatchAction" },
+			"userInteractionCount": 29345
+		  },
+		  "regionsAllowed": ""
+		}
+		</script><script>var node_taxonomy =[];</script><link rel="canonical" href="https://www.artofliving.org/in-en/shiva-bhajans-and-chants" />
+<link rel="shortcut icon" href="https://www.artofliving.org/sites/all/themes/aol-zen/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content=" Shiva The complete list of Shiva bhajans &amp;amp; chants Top 5 Art of Living Shiva Bhajans ▶&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media;Shiva Bhajans and Chants" />
+<meta name="keywords" content="The Art of Living Foundation, Sri Sri Ravi Shankar, Yoga, Meditation, Sudarshan Kriya, Spirituality, Stress Relief, Social Transformation, Youth Empowerment, World Peace, Disaster Relief &amp; Trauma Care, NGO, Ayurveda" />
+<link rel="shortlink" href="https://www.artofliving.org/in-en/node/993743" />
+<meta property="og:title" content="Shiva Bhajans and Chants" />
+<meta property="fb:app_id" content="1671756029737991" />
+<meta property="og:description" content=" Shiva The complete list of Shiva bhajans &amp;amp; chants Top 5 Art of Living Shiva Bhajans ▶&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media;" />
+<meta property="og:locale" content="en-in" />
+<meta property="og:site_name" content="Art Of Living (India)" />
+<meta property="og:type" content="Article" />
+<meta property="og:image" content="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/1920x780%20hero%20bhajans.jpg?itok=4Lce5DS8" />
+<meta property="og:url" content="https://www.artofliving.org/in-en/shiva-bhajans-and-chants" />
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="@artofliving" />
+<meta property="twitter:title" content="Shiva Bhajans and Chants" />
+<meta property="twitter:text:title" content="Shiva Bhajans and Chants" />
+<meta property="twitter:description" content=" Shiva The complete list of Shiva bhajans &amp;amp; chants Top 5 Art of Living Shiva Bhajans ▶&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media;" />
+<meta property="twitter:image" content="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/1920x780%20hero%20bhajans.jpg?itok=4Lce5DS8" />
+<meta property="twitter:domain" content="Art Of Living (India)" />
+  <title>Shiva Bhajans and Chants | The Art of Living India</title>
+  <meta http-equiv="content-language" content="en-in">
+  <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    
+  <meta http-equiv="cleartype" content="on">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Medium.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Bold.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Book.woff">
+<link rel="preload" as="font" crossOrigin="anonymous" href="https://www.artofliving.org/sites/all/themes/unity2/fonts/GothamNarrow-Light.woff">
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_7KdSbJtuPJFqQPINHRh0HHNHRU6mPFCNbxHTUGH1qjw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_O2yRf4uBIrL2gCRB7W-wDlVylIx9xMszfw93HLhYopM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_aKfGw0B_RMfUXbi1ZKM-nVrZCcaLzU23ETM4q0ZT83g.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_osTRjgMgOCzW1NmNIYEZdC0fbxVY569Ui--zc0FZ5uo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_zF9w944d_b4yz_xp_X6MBWNMUeYg_FjaOpA3MZTV3q8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_nBuBvNb9wLA9OrnvL_DrTckoxTDHoNsa87CHbUNF2lY.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.div_FullCarouselComponent .lp_carousel_fld_outer .lp_carousel_fld_text_text .banner_text{width:auto;max-width:60vw;margin:0 auto;}.div_FullCarouselComponent .lp_carousel_fld_outer .lp_carousel_fld_text_text .banner_text span{font-size:46px !important;font-weight:600;}.second_sec .div_html_component{width:auto;max-width:60vw;margin:0 auto;}.second_sec .div_html_component p{margin-bottom:0;margin-top:0;color:rgba(0,0,0,0.4);font-size:22px;line-height:1.4;}.knowing_shiva_sec .row-title-wrap .row-title{margin-bottom:0;}@media(max-width:767px){.last_sec .right_sec{width:auto !important;}.div_html_component .html-component .banner_text{max-width:100vw!important;}.div_html_component .html-component .banner_text span{font-size:30px !important;}#landing-pages-content .div_FullCarouselComponent .full-width-carousel .field-slideshow-lp-gallery .lp_carousel_fld_outer .lp_carousel_small_g_text{top:65% !important;left:5% !important;width:100%!important;transform:none;transform-origin:center;}.div_FullCarouselComponent .lp_carousel_fld_outer .lp_carousel_fld_text_text .banner_text span{font-size:30px !important;}.second_sec .div_html_component{max-width:100%;}.div_FullCarouselComponent .lp_carousel_fld_outer .lp_carousel_fld_text_text .banner_text{max-width:100%;}#element-577442 img{margin:0;}}.div_html_component .html-component .banner_text{width:auto;max-width:60vw;margin:0 auto;}.div_html_component .html-component .banner_text span{font-size:40px !important;font-weight:600;}.div_html_component .html-component .banner_text_p{font-size:25px;margin-bottom:0;}.last_sec .left_sec a{color:rgba(0,0,0,0.6);text-decoration:underline;font-size:16px;}.last_sec  .right_sec{text-align:left !important;background:#ffad00;width:500px;float:right;border-radius:5px;padding:30px;}.last_sec  .right_sec a{color:#fff;padding:0;font-size:30px;line-height:1;}@media(min-width:1024px){.iframe_sec .div_html_component iframe{height:300px;}.div_html_component .html-component .conatiner .fluidvids-wraper .fluidvids{padding-top:0% !important;}}.html-component .field-item h4{color:#000;}.row-inner-wrapper .row-title-wrap h2.title_vd{font-size:45px !important;padding:20px;font-family:"Gotham Narrow Book";}.div_WisdomNavigation .main .navigation .nav_left a .nav_title{color:#a7a7a7;}@media (max-width:767px){.row-inner-wrapper .row-title-wrap h2.title_vd{font-size:40px !important;}}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_t3rHFPU_dzXbDYvI6erwIpWlfnNqdbpHZ6IzvW-f8WE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.artofliving.org/sites/www.artofliving.org/files/css/css_ENc-LsCoWKYk4As-Mo2hWK3wFSjlnRi1IlNfN3D_Q6Y.css" media="all" />
+<script type="js-postload" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.min.2.2.4.min.js?v=2.2.4"></script>
+<script type="js-postload" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.once.1.2.min.js?v=1.2"></script>
+<script type="js-postload" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/drupal.min.js?s7105h"></script>
+<script type="js-postload" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/variables.min.js?s7105h"></script>
+
+</head>
+<body class="unity2 html not-front not-logged-in no-sidebars page-node page-node- page-node-993743 node-type-landing-pages-node i18n-en-in" >
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5335998-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-5335998-1');
+</script>
+<!-- Google Tag Manager -->
+<script type="js-postload">
+(function(w,d,s,l,i, $){
+  var tagLoaded = false, tagTimeout;
+function loadTagManager() {
+  if (false == tagLoaded) {
+    tagLoaded = true;
+    clearTimeout(tagTimeout);
+    
+      w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  }
+}
+$( window ).on("scroll.tagmanagerload", function() {
+  loadTagManager();          
+  console.log("google scroll");    
+  $(this).off('scroll.tagmanagerload');
+});
+$( document ).ready(function() {
+  tagTimeout = setTimeout(function(){
+    console.log("google timeout");
+    $(this).off('scroll.tagmanagerload');
+    loadTagManager();      
+   }, 10000);
+          
+});
+
+})(window,document,'script','dataLayer','GTM-N2J496', jQuery);</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2J496"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- <div class="sticky-wrapper">
+    <div class="stick-container top" style="background-color:#FFAE00;"><span class="sticky-text">Gurudev Sri Sri Ravi Shankar in Europe 11-28 April</span><a class="orange-grad" href="https://www.artofliving.org/eu-en/search/course">View Programme</a> <span class="close-icons uk-close-icon">×</span></div>
+  </div> -->
+
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top topnav mar-b-0 main-nav bbb" role="navigation" >
+  <div class="mobile-12">
+    <!--only mobile-->
+    <div id="mobile-header">
+      <a id="responsive-menu-button" href="#sidr-main"></a>
+      <span class="local_center_menu_head">National Website Menu</span>
+    </div>
+
+    <div id="navigation">
+      <a id="responsive-menu-close-button" href="#sidr-main"></a>
+      <nav class="nav">
+        <ul class="nav navbar-nav navbar-left" id="mobile-menu-content">
+       
+        </ul>
+        <script type="js-postload">
+        (function($) {
+          $("#responsive-menu-button").on("click.menu", function() {
+            $(this).off('click.menu');
+						$("#mobile-menu-content, #sidr-id-mobile-menu-content").html($("#desktop-menu-content").html());
+          });
+          $("#mobile-menu-content, #sidr-id-mobile-menu-content").html($("#desktop-menu-content").html());
+
+          $(".main_sub_menu_arrow").click(function (){
+              if($(window).width() < 767){
+                $(this).parent().find('ul').slideToggle();
+              }
+          })
+
+          $(".menu_arrow").click(function (){
+              if($(window).width() < 767){
+                $(this).parent().find('.sub-menu').slideToggle();
+                 $(this).parent().toggleClass("active-submenu");
+              }
+          })
+        })(jQuery);
+        </script>
+              </nav>
+                         <div class="humberg-center-menu-item">
+              <a href="/in-en/search/course" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_crs_icon"></i><span>Find a Program</span></div></a>
+                   <a href="/in-en/search/center" class="find-course-btn"><div class="find_btn_cont"><i class="icon20 find_center_icon"></i><span>Find a Center</span></div></a>
+            </div>
+              <div class="talk_teacher">
+        <span>Contact us</span>
+        <a href="tel:+918067612360" class="track_call">+91-80-67612360</a>
+              </div>
+            
+  
+      
+            <ul class="social mar-t-10">
+      		        <li><a href="https://www.twitter.com/artofliving"><i class="icon25 twt_icon"></i></a></li>
+	     		        <li><a href="https://www.facebook.com/TheArtOfLivingGlobal"><i class="icon25 fb_icon"></i></a></li>
+	      	        <li><a href="https://www.instagram.com/artofliving"><i class="icon25 inst_icon"></i></a></li>
+	      	        <li><a href="https://www.youtube.com/artofliving"><i class="icon25 ytube_icon"></i></a></li>
+	            </ul>
+    </div>
+    <!--only mobile end-->
+
+   
+    <div class="logo-2 pad-0">
+      <a class="navbar-brand topnav logo" href="/in-en"><img class="img-responsive" src="https://www.artofliving.org/sites/www.artofliving.org/files/images/logo/logo-2x-cropped.png" alt="AOL logo" height="60" width="157" > </a>
+    </div>
+
+    <div class="menu-web-10 pad-0 ">
+      <div class="mobile-12 pad-0 mar-t-15 right_menu">
+        <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left unity_menu" id ="desktop-menu-content">
+            <li  data-tids="[]">
+          <a class="item-primary" href="/in-en/programs">Programs</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink not_link">Popular</span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/programs/introtalk-breath-yoga-meditation" class="DropdownMenuLink" data-text="IntroTalk" title="IntroTalk">IntroTalk</a></span></li><li><span><a href="/in-en/programs/happiness-program" class="DropdownMenuLink" data-text="Happiness Program" title="Happiness Program">Happiness Program</a></span></li><li><span><a href="/in-en/programs/happiness-program-youth" class="DropdownMenuLink" data-text="Happiness Program For Youth" title="Happiness Program For Youth">Happiness Program For Youth</a></span></li><li><span><a href="/in-en/online-meditation-breath-workshop" class="DropdownMenuLink" data-text="Online Meditation and Breath Workshop" title="Online Meditation and Breath Workshop">Online Meditation and Breath Workshop</a></span></li><li><span><a href="/in-en/programs/advanced-meditation-program" class="DropdownMenuLink" data-text="Advanced Meditation Program" title="Advanced Meditation Program">Advanced Meditation Program</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/online-meditation-breath-workshop">Sudarshan Kriya</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/programs/happiness-program" class="DropdownMenuLink" data-text="Happiness Program" title="Happiness Program">Happiness Program</a></span></li><li><span><a href="/in-en/programs/happiness-program-youth" class="DropdownMenuLink" data-text="Happiness Program For Youth" title="Happiness Program For Youth">Happiness Program For Youth</a></span></li><li><span><a href="/in-en/online-meditation-breath-workshop" class="DropdownMenuLink" data-text="Online Meditation and Breath Workshop" title="Online Meditation and Breath Workshop">Online Meditation and Breath Workshop</a></span></li><li><span><a href="/in-en/programs/introtalk-breath-yoga-meditation" class="DropdownMenuLink" data-text="IntroTalk" title="IntroTalk">IntroTalk</a></span></li><li><span><a href="/in-en/research-sudarshan-kriya" class="DropdownMenuLink" data-text="Research" title="Research">Research</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/children-teens">Children & Teen</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/children-teens/prajna-yoga" class="DropdownMenuLink" data-text="Intuition Process" title="Intuition Process">Intuition Process</a></span></li><li><span><a href="/in-en/children-teens/utkarsha-yoga" class="DropdownMenuLink" data-text="Utkarsha Yoga" title="Utkarsha Yoga">Utkarsha Yoga</a></span></li><li><span><a href="/in-en/children-teens/medha-yoga-level-1" class="DropdownMenuLink" data-text="Medha Yoga Level 1" title="Medha Yoga Level 1">Medha Yoga Level 1</a></span></li><li><span><a href="/in-en/children-teens/know-your-teen" class="DropdownMenuLink" data-text="Know Your Child &amp; Know Your Teen" title="Know Your Child &amp; Know Your Teen">Know Your Child &amp; Know Your Teen</a></span></li><li><span><a href="/in-en/children-teens/school-programs" class="DropdownMenuLink" data-text="School Programs" title="School Programs">School Programs</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga/sri-sri-yoga-1">Yoga</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://www.artofliving.org/in-en/yoga/sri-sri-yoga-1" class="DropdownMenuLink" data-text="Sri Sri Yoga 1 " title="Sri Sri Yoga 1 " target="_blank">Sri Sri Yoga 1 </a></span></li><li><span><a href="/in-en/sri-sri-yoga-2" class="DropdownMenuLink" data-text="Sri Sri Yoga 2" title="Sri Sri Yoga 2">Sri Sri Yoga 2</a></span></li><li><span><a href="https://www.artofliving.org/in-en/yoga/corporate-yoga" class="DropdownMenuLink" data-text="Corporate Yoga" title="Corporate Yoga" target="_blank">Corporate Yoga</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/sahaj-samadhi">Meditation</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/sahaj-samadhi" class="DropdownMenuLink" data-text="Sahaj Samadhi Meditation" title="Sahaj Samadhi Meditation">Sahaj Samadhi Meditation</a></span></li><li><span><a href="/in-en/programs/advanced-meditation-program" class="DropdownMenuLink" data-text="Advanced Meditation Program" title="Advanced Meditation Program">Advanced Meditation Program</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/wellness-program">Wellness</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://www.artofliving.org/in-en/wellness/programs/intro-talk" class="DropdownMenuLink" data-text="Wellness Introductory Talk" title="Wellness Introductory Talk" target="_blank">Wellness Introductory Talk</a></span></li><li><span><a href="https://www.artofliving.org/in-en/wellness/programs/spine-care-intro-talk" class="DropdownMenuLink" data-text="Spine Care Introductory Talk" title="Spine Care Introductory Talk" target="_blank">Spine Care Introductory Talk</a></span></li><li><span><a href="/in-en/wellness-program" class="DropdownMenuLink" data-text="Wellness Program" title="Wellness Program">Wellness Program</a></span></li><li><span><a href="/in-en/wellness-programs/quit-tobacco" class="DropdownMenuLink" data-text="Quit Tobacco program" title="Quit Tobacco program">Quit Tobacco program</a></span></li><li><span><a href="/in-en/wellness-programs/substance-user-wellness-program" class="DropdownMenuLink" data-text="Substance user program" title="Substance user program">Substance user program</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item7 -link"><span class="DropdownMenuLink "><a href="https://www.artofliving.org/in-en/programs/advanced-meditation-program" class="DropdownMenuLink" data-text="Advance Programs" title="" target="_blank">Advance Programs</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/programs/advanced-meditation-program" class="DropdownMenuLink" data-text="Silence" title="Silence">Silence</a></span></li><li><span><a href="/in-en/divya-samaj-nirman" class="DropdownMenuLink" data-text="DSN" title="DSN">DSN</a></span></li><li><span><a href="/in-en/blessing-program" class="DropdownMenuLink" data-text="Blessing" title="Blessing">Blessing</a></span></li><li><span><a href="/in-en/follow-sessions" class="DropdownMenuLink" data-text="Follow up" title="Follow up">Follow up</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item8 -link"><span class="DropdownMenuLink "><a href="https://www.artofliving.org/in-en/teacher-training-program" class="DropdownMenuLink" data-text="Teachers Training" title="" target="_blank">Teachers Training</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/teacher-training-program" class="DropdownMenuLink" data-text="Teachers Training" title="Teachers Training">Teachers Training</a></span></li><li><span><a href="/in-en/landing-pages/200h-yoga-teacher-training" class="DropdownMenuLink" data-text="Sri Sri Yoga teacher" title="Sri Sri Yoga teacher">Sri Sri Yoga teacher</a></span></li><li><span><a href="/in-en/karma-yoga" class="DropdownMenuLink" data-text="Karma Yoga" title="Karma Yoga">Karma Yoga</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item9 -link"><span class="DropdownMenuLink "><a href="https://corporateprograms.artofliving.org/apex" class="DropdownMenuLink" data-text="Corporates" title="" target="_blank">Corporates</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://corporateprograms.artofliving.org/apex" class="DropdownMenuLink" data-text="Apex" title="Apex" target="_blank">Apex</a></span></li><li><span><a href="https://corporateprograms.artofliving.org/apex/tlex" class="DropdownMenuLink" data-text="Tlex" title="Tlex" target="_blank">Tlex</a></span></li><li><span><a href="https://corporateprograms.artofliving.org/apex/excellence-workplace-program" class="DropdownMenuLink" data-text="MSME" title="MSME" target="_blank">MSME</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item10 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/events">Events</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/biography">Gurudev</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/biography">About Gurudev</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/biography" class="DropdownMenuLink" data-text="Biography " title="">Biography </a></span></li><li><span><a href="/in-en/awards-and-honors-sri-sri-ravi-shankar" class="DropdownMenuLink" data-text="Awards and Honours" title="Awards and Honours">Awards and Honours</a></span></li><li><span><a href="/in-en/books" class="DropdownMenuLink" data-text="Books " title="Books ">Books </a></span></li><li><span><a href="/in-en/wisdom-videos" class="DropdownMenuLink" data-text="Wisdom Videos" title="Wisdom Videos">Wisdom Videos</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/research-sudarshan-kriya">Sudarshan Kriya</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/wisdom">Wisdom</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/wisdom/upanishads" class="DropdownMenuLink" data-text="Upanishads" title="Upanishads">Upanishads</a></span></li><li><span><a href="/in-en/wisdom/ashtavakra-gita" class="DropdownMenuLink" data-text="Ashtavakra gita" title="Ashtavakra gita">Ashtavakra gita</a></span></li><li><span><a href="/in-en/wisdom/bhakti-sutra" class="DropdownMenuLink" data-text="Bhakti Sutra" title="Bhakti Sutra">Bhakti Sutra</a></span></li><li><span><a href="/in-en/wisdom/yoga-sutras" class="DropdownMenuLink" data-text="Yoga Sutra" title="Yoga Sutra">Yoga Sutra</a></span></li><li><span><a href="/in-en/wisdom/bhagavad-gita" class="DropdownMenuLink" data-text="Bhagavad Gita" title="Bhagavad Gita">Bhagavad Gita</a></span></li><li><span><a href="/in-en/wisdom/riddlemethis" class="DropdownMenuLink" data-text="Riddlemethis " title="Riddlemethis ">Riddlemethis </a></span></li><li><span><a href="/in-en/wisdom/story-time" class="DropdownMenuLink" data-text="Story Time" title="Story Time">Story Time</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/culture">Culture</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/bhajans" class="DropdownMenuLink" data-text="Bhajans " title="Bhajans ">Bhajans </a></span></li><li><span><a href="/in-en/powerful-chants" class="DropdownMenuLink" data-text="Chants " title="Chants ">Chants </a></span></li><li><span><a href="/in-en/culture/amazing-india" class="DropdownMenuLink" data-text="Amazing India" title="Amazing India">Amazing India</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/srisriontour">Tour schedule</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/news-room">In the news</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/news-room" class="DropdownMenuLink" data-text="News room" title="News room">News room</a></span></li><li><span><a href="/in-en/newsroom/press-releases" class="DropdownMenuLink" data-text="Press Release" title="Press Release">Press Release</a></span></li><li><span><a href="/in-en/newsroom/press-reports" class="DropdownMenuLink" data-text="Press Reports" title="Press Reports">Press Reports</a></span></li></ul><div class="mega-menu-content"></div></li></ul></div>          </li><li class=""><a href="https://www.artofliving.org/in-en/sudarshan-kriya">Sudarshan Kriya</a></li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/yoga">Yoga</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga/sri-sri-yoga-1">Programs</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/yoga/sri-sri-yoga-1" class="DropdownMenuLink" data-text="Sri Sri Yoga Level 1" title="Sri Sri Yoga Level 1">Sri Sri Yoga Level 1</a></span></li><li><span><a href="/in-en/yoga/corporate-yoga" class="DropdownMenuLink" data-text="Corporate Yoga " title="Corporate Yoga ">Corporate Yoga </a></span></li><li><span><a href="/in-en/yoga/yoga-retreats" class="DropdownMenuLink" data-text="Yoga Retreats" title="Yoga Retreats">Yoga Retreats</a></span></li><li><span><a href="https://www.artofliving.org/in-en/sri-sri-yoga-2" class="DropdownMenuLink" data-text="Sri Sri Yoga 2" title="Sri Sri Yoga 2" target="_blank">Sri Sri Yoga 2</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga/yoga-for-beginners/brief-history-yoga">History</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/yoga/yoga-for-beginners/brief-history-yoga" class="DropdownMenuLink" data-text="Brief History Yoga" title="Brief History Yoga">Brief History Yoga</a></span></li><li><span><a href="https://www.artofliving.org/yoga/patanjali-yogasutra" class="DropdownMenuLink" data-text="Patanajali yoga sutra" title="Patanajali yoga sutra" target="_blank">Patanajali yoga sutra</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga-for-children/childrens-yoga">How to Yoga for Kids </a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/yoga-for-children/childrens-yoga" class="DropdownMenuLink" data-text="Yoga for children yoga " title="Yoga for children yoga ">Yoga for children yoga </a></span></li><li><span><a href="/in-en/yoga/yoga-poses" class="DropdownMenuLink" data-text="Yoga Poses" title="Yoga Poses">Yoga Poses</a></span></li><li><span><a href="/in-en/yoga/yoga-women" class="DropdownMenuLink" data-text="Yoga for Women" title="Yoga for Women">Yoga for Women</a></span></li><li><span><a href="/in-en/yoga/yoga-beginners" class="DropdownMenuLink" data-text="Yoga for beginners" title="Yoga for beginners">Yoga for beginners</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga/health-and-wellness">Therapies</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/yoga/health-and-wellness" class="DropdownMenuLink" data-text="Health and wellness" title="Health and wellness">Health and wellness</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/yoga/yoga-benefit">Benefits</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/wellness">Wellness</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/wellness-program">Programs</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://www.artofliving.org/in-en/wellness/programs/intro-talk" class="DropdownMenuLink" data-text="Wellness Introductory Talk" title="Wellness Introductory Talk" target="_blank">Wellness Introductory Talk</a></span></li><li><span><a href="https://www.artofliving.org/in-en/wellness/programs/spine-care-intro-talk" class="DropdownMenuLink" data-text="Spine Care Introductory Talk" title="Spine Care Introductory Talk" target="_blank">Spine Care Introductory Talk</a></span></li><li><span><a href="/in-en/wellness-program" class="DropdownMenuLink" data-text="Wellness Program" title="Wellness Program">Wellness Program</a></span></li><li><span><a href="/in-en/wellness-programs/quit-tobacco" class="DropdownMenuLink" data-text="Quit Tobacco program" title="Quit Tobacco program">Quit Tobacco program</a></span></li><li><span><a href="/in-en/wellness-programs/substance-user-wellness-program" class="DropdownMenuLink" data-text="Substance user program" title="Substance user program">Substance user program</a></span></li></ul><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/meditation">Meditation</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/sahaj-samadhi">Programs</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://www.artofliving.org/in-en/sahaj-samadhi" class="DropdownMenuLink" data-text="Sahaj Samadhi Meditation" title="Sahaj Samadhi Meditation" target="_blank">Sahaj Samadhi Meditation</a></span></li><li><span><a href="https://www.artofliving.org/in-en/programs/advanced-meditation-program" class="DropdownMenuLink" data-text="Advanced Meditation Program" title="Advanced Meditation Program" target="_blank">Advanced Meditation Program</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/meditation/online-guided-meditation">How to's</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/meditation/meditation-for-you/8-tips-get-started-meditation" class="DropdownMenuLink" data-text="Get Started Meditation" title="Get Started Meditation">Get Started Meditation</a></span></li><li><span><a href="/in-en/meditation/meditation-beginners" class="DropdownMenuLink" data-text="Meditation beginners" title="Meditation beginners">Meditation beginners</a></span></li><li><span><a href="/in-en/meditation/relaxing-music-meditation" class="DropdownMenuLink" data-text="Relaxing Music Meditation" title="Relaxing Music Meditation">Relaxing Music Meditation</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/meditation/meditation-benefits">Benefits</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/meditation/online-guided-meditation">Guided Meditation </a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/meditation/online-guided-meditation" class="DropdownMenuLink" data-text="Online Guided Meditation" title="Online Guided Meditation">Online Guided Meditation</a></span></li><li><span><a href="/in-en/meditation/meditation-for-you/morning-meditation" class="DropdownMenuLink" data-text="Morning Meditation" title="Morning Meditation">Morning Meditation</a></span></li><li><span><a href="/in-en/meditation/meditation-for-you/hari-om-meditation" class="DropdownMenuLink" data-text="Hari Om Meditation" title="Hari Om Meditation">Hari Om Meditation</a></span></li><li><span><a href="/in-en/meditation/yoga-nidra-guided-meditation" class="DropdownMenuLink" data-text="Yoga Nidra" title="Yoga Nidra">Yoga Nidra</a></span></li><li><span><a href="/in-en/meditation/aura-guided-meditation" class="DropdownMenuLink" data-text="Aura Meditation" title="Aura Meditation">Aura Meditation</a></span></li><li><span><a href="/in-en/meditation/full-moon-guided-meditation" class="DropdownMenuLink" data-text="Full Moon Meditation" title="Full Moon Meditation">Full Moon Meditation</a></span></li><li><span><a href="/in-en/meditation/journey-within-guided-meditation" class="DropdownMenuLink" data-text="Journey Within Meditation" title="Journey Within Meditation">Journey Within Meditation</a></span></li><li><span><a href="/in-en/meditation/inner-silence-guided-meditation" class="DropdownMenuLink" data-text="Inner Slience Meditation" title="Inner Slience Meditation">Inner Slience Meditation</a></span></li></ul><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/lifestyle">Lifestyle</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/health-tips">Health</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/health-tips" class="DropdownMenuLink" data-text="Health Tips" title="Health Tips">Health Tips</a></span></li><li><span><a href="/in-en/ayurveda" class="DropdownMenuLink" data-text="Ayurveda " title="Ayurveda ">Ayurveda </a></span></li><li><span><a href="/in-en/lifestyle/well-being" class="DropdownMenuLink" data-text="Lifestyle well being" title="Lifestyle well being">Lifestyle well being</a></span></li><li><span><a href="/in-en/recipes" class="DropdownMenuLink" data-text="Recipes" title="Recipes">Recipes</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/success">Career</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/relationship-0">Relationship</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/lifestyle/happiness">Lifehacks</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/lifestyle/happiness" class="DropdownMenuLink" data-text="Lifestyle Happiness" title="Lifestyle Happiness">Lifestyle Happiness</a></span></li><li><span><a href="/in-en/finding-sustainable-happiness" class="DropdownMenuLink" data-text="Sustainable Happiness" title="Sustainable Happiness">Sustainable Happiness</a></span></li><li><span><a href="/in-en/wisdom/emotion" class="DropdownMenuLink" data-text="Wisdom Emotions" title="Wisdom Emotions">Wisdom Emotions</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/wisdom/quotes">Inspiration</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/wisdom/quotes" class="DropdownMenuLink" data-text="Wisdom quotes" title="Wisdom quotes">Wisdom quotes</a></span></li><li><span><a href="/in-en/wisdom/daily-tips" class="DropdownMenuLink" data-text="Daily tips" title="Daily tips">Daily tips</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item6 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/children-teens/parenting">Parenting</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item7 -link"><span class="DropdownMenuLink "></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/children-teens">Early Learning</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/children-teens">Programs </a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/children-teens/prajna-yoga" class="DropdownMenuLink" data-text="Intuition Process" title="Intuition Process">Intuition Process</a></span></li><li><span><a href="/in-en/children-teens/utkarsha-yoga" class="DropdownMenuLink" data-text="Utkarsha Yoga " title="Utkarsha Yoga ">Utkarsha Yoga </a></span></li><li><span><a href="/in-en/children-teens/medha-yoga-level-1" class="DropdownMenuLink" data-text="Medha yoga level 1" title="Medha yoga level 1">Medha yoga level 1</a></span></li><li><span><a href="/in-en/children-teens/know-your-teen" class="DropdownMenuLink" data-text="Know Your Child &amp; Know Your Teen" title="Know Your Child &amp; Know Your Teen">Know Your Child &amp; Know Your Teen</a></span></li><li><span><a href="/in-en/children-teens/school-programs" class="DropdownMenuLink" data-text="School Programs" title="School Programs">School Programs</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/culture">Culture</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/children-teens/parenting">Parenting</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/children-teens/sri-sri-sanskar-kendra">Sri Sri Sanskar Kendra</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li><li  data-tids="[]">
+          <a class="item-primary" href="/in-en/about-us">Art of Living</a>            <b class="menu_arrow"></b>
+            <div class="sub-menu">
+             <ul class="sub-menu-inner"><li class="without-image2  with-left-margin-item1 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/about-us">About</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="/in-en/ssrvm" class="DropdownMenuLink" data-text="SSVRM" title="SSVRM">SSVRM</a></span></li><li><span><a href="https://srisriuniversity.edu.in" class="DropdownMenuLink" data-text="Sri Sri University" title="Sri Sri University" target="_blank">Sri Sri University</a></span></li><li><span><a href="/in-en/ashram/india" class="DropdownMenuLink" data-text="Ashrams" title="Ashrams">Ashrams</a></span></li><li><span><a href="/in-en/gnana-kshetra" class="DropdownMenuLink" data-text="Gnana Kshetra" title="Gnana Kshetra">Gnana Kshetra</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item2 -link"><span class="DropdownMenuLink "><a href="/in-en/programs" class="DropdownMenuLink" title="Programs" data-text="Programs">Programs</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item3 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/projects">Service Initiatives</a></span><div class="main_sub_menu_arrow"><span class="sub_menu_arrow"></span></div><ul class="sub-menu-inner-inner"><li><span><a href="https://jaltara.artofliving.org" class="DropdownMenuLink" data-text="JalTara Project" title="" target="_blank">JalTara Project</a></span></li><li><span><a href="https://www.artofliving.org/rres" class="DropdownMenuLink" data-text="River Symposium" title="River Symposium" target="_blank">River Symposium</a></span></li><li><span><a href="/in-en/projects/corona-relief-work" class="DropdownMenuLink" data-text="Covid Relief Projects" title="Covid relief projects">Covid Relief Projects</a></span></li><li><span><a href="/in-en/projects/education" class="DropdownMenuLink" data-text="Education Projects" title="Education Projects">Education Projects</a></span></li><li><span><a href="/in-en/projects/disaster-relief" class="DropdownMenuLink" data-text="Disaster Projects" title="Disaster Projects">Disaster Projects</a></span></li><li><span><a href="/in-en/projects/rural-development" class="DropdownMenuLink" data-text="Rural Projects" title="Rural Projects">Rural Projects</a></span></li><li><span><a href="/in-en/projects/women-empowerment" class="DropdownMenuLink" data-text="Women Empowerment Projects" title="Women empowerment projects">Women Empowerment Projects</a></span></li><li><span><a href="/in-en/projects/prison-program" class="DropdownMenuLink" data-text="Prison Projects" title="Prison Projects">Prison Projects</a></span></li><li><span><a href="/in-en/projects/peace-initiatives" class="DropdownMenuLink" data-text="Peace Initiatives" title="Peace Initiatives">Peace Initiatives</a></span></li><li><span><a href="https://ssiast.spayee.com" class="DropdownMenuLink" data-text=" Agriculture Project " title=" Agriculture project " target="_blank"> Agriculture Project </a></span></li><li><span><a href="/in-en/projects/stories-of-change" class="DropdownMenuLink" data-text="Stories of Change Project" title="Stories of change project">Stories of Change Project</a></span></li><li><span><a href="/in-en/projects/project-bharat" class="DropdownMenuLink" data-text="Project Bharat" title="Project Bharat">Project Bharat</a></span></li><li><span><a href="/in-en/dsy" class="DropdownMenuLink" data-text="DSY" title="DSY">DSY</a></span></li></ul><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item4 -link"><span class="DropdownMenuLink "><a class="item-primary" href="/in-en/events">Celebration & Events</a></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li><li class="without-image2  with-left-margin-item5 -link"><span class="DropdownMenuLink "></span><span class="no_sub_menu_arrow"></span><div class="mega-menu-content"></div></li></ul></div>          </li>          </ul>
+                  </div>
+ <!--only for unity new requirement for top rightside course search menu-->
+        <div class="search-contact">
+        <ul class="head_right_sec search_f-7  pad-0">
+          <li><span class="search-icon"></span><a href="/in-en/search/course" class="icon-link">Search Programs</a></li>
+          <li><span class="phone-icon"></span> <a href="tel:+91-80-67612360" class="track_call">+91-80-67612360</a></li>
+        </ul>
+    </div>
+          </div>
+    </div>
+        <div class="cnt_lan_div  showSearchCoursesIcon">
+       <div class="unity_plus_country_locator unity2">
+  <div class="current-country-holder">
+  <div class="Label"  id ="current_country"><a href="#">India</a>  </div>
+  
+      <ul class="center-changer">
+             
+        <li class="default"><a class="curren-country-sub" href="/in-en/search/center">Find Your Local Center</a></li>
+                          <li class="intl-pop default local"><a class="curren-country-sub">International</a></li>
+      </ul>  
+    
+  </div>        
+    <ul id="CountrySelectorDropdown" class="megamenu CountrySelectorHidden">  
+       <!--     <div class="continent-select continent-country">
+          <input id="continent-select" type="text" placeholder="Select a Region" disabled />
+          <i class="fa-chevron-down" aria-hidden="true"></i>
+        </div>
+        <div class="country-select continent-country">
+          <input id="country-select" type="text" placeholder="Select a Country" disabled />
+          <i class="fa-chevron-down" aria-hidden="true"></i>
+        </div>   -->
+        <div class="mobile-country-locator-2-container">
+          <ul class="mobile-country-locator-2">
+            <li class="what-u-lokin-q"><strong> What are you looking for?</strong><span class="close-selector-top"></span></li>
+                          <li class="find-a-course-gl"><a href="/in-en/search/course">Find Courses</a></li>
+                        <li class="country-city-chapters"><a href="/in-en/search/center">IN City Centers</a></li>
+            <li class="international-options">International</li>
+            <li class="search-website-gl">Search Website</li>
+          </ul>
+          
+          <div class="change-country-website-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-selector"></span>
+               <h3>Change Country Site</h3>
+               <span class="close-selector"></span>
+             </div>
+             <input id="mobile-country-finder" type="text" placeholder="Enter a Country Name or Code" />
+          </div>
+
+
+          <div class="international-options-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>International</h3><span class="close-selector"></span></div>
+             <div class="International-option-list">
+                <ul>
+                  <li class="change-country-website">Change Country Website</li>
+                  <li class="International-retreat-center">Retreat Centers</li>
+                  <li class="global-website"><a href="/global/home">Global Website</a></li>
+                </ul>
+             </div>
+           </div>
+            <div class="smart-search-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>Find Courses</h3><span class="close-selector"></span></div>
+             <div class="smart-search-option-list">
+                <ul>
+                  <li class="search-course-name">Search Courses By Name</li>
+                  <li class="search-course-location">Search Courses By Location</li>
+                </ul>
+             </div>
+           </div>
+            <div class="search-course-location-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-search-selector"></span>
+               <h3>Search Courses By Location</h3>
+               <span class="close-selector"></span>
+             </div>
+             <form class="home-page-course-search2">
+              <input type="hidden" name="center_autocomplete_google_lat2" value="">
+              <input type="hidden" name="center_autocomplete_google_lng2" value="">
+              <input type="hidden" name="center_autocomplete_google_obj2" value="">
+              
+              <div class="ce-form-element"><div class="form-type-textfield form-item-center-autocomplete-google2">
+               <input type="text" id="edit-center-autocomplete-google2" name="center_autocomplete_google2" value="" size="60" maxlength="128" class="form-text form-control search" placeholder="enter a location" autocomplete="off">
+              </div>
+              </div>
+            </form>
+          </div>
+          <div class="search-course-name-selector country-locator-phase2">
+            <div class="inner-switch-bar">
+               <span class="inner-hide-search-selector"></span>
+               <h3>Search Courses By Name</h3>
+               <span class="close-selector"></span>
+             </div>
+             <input id="mobile-search-course-finder" class="mobile-search-course-finder" type="text" placeholder="Enter a Course Name" />
+             <div class="search_autocomplete_course" style="display:none;"></div>
+          </div>
+          <div class="International-retreat-center-selector country-locator-phase2">
+              <div class="inner-switch-bar"><span class="inner-hide-selector"></span><h3>Select a Retreat Center</h3><span class="close-selector"></span></div>
+             <div class="International-retreat-center-list">
+              <ul>                
+                 <li><a href="/iaolc">Canada - Montreal</a></li>  
+                 <li><a href="/badantogast">Germany - Bad Antogast </a></li>
+                 <li><a href="https://www.happinessretreat.org">India - Bangalore</a></li>
+                 <li><a href="/intl-meditation-center-usa">USA - Boone, NC</a></li>
+              </ul>
+            </div>
+          </div>
+          
+           <div class="country-selector-gl country-locator-phase2">
+                  <div class="switch-bar"><span class="hide-selector"></span><h3>Find Courses</h3><span class="close-selector"></span></div>
+          </div> 
+          
+          
+          <div class="change-country-chapter-website-selector country-locator-phase2">
+              <div class="switch-bar"><span class="hide-selector"></span><h3>Find an Art of Living Center</h3><span class="close-selector"></span></div>
+             <input id="mobile-country-chapter-finder" type="text" placeholder="Enter a location "/>
+              <ul class="country-chapters" style="display: none">
+<!--                  --><!--                      <li>-->
+<!--                        <a href="--><!--"> --><!--</a>-->
+<!--                      </li> -->              </ul>
+          </div>
+          <div  class="search-webiste-gl-p2 country-locator-phase2">
+            <div class="switch-bar"><span class="hide-selector"></span><h3>Search This Website</h3><span class="close-selector"></span></div>
+                                  </div>
+
+        </div>
+        
+            <li class="DropdownMenu">
+      
+      </li>
+      <li id="mobile-country-list" class="hidden"></li>
+      <li id="bt-close" class="bt-close">X</li>
+    </ul>
+</div>
+              	<div class="lang_parent">
+       	<div class="LanguageSelection LanguageDiv"><ul class="megamenu"><li class="bn-in first"><a href="/in-bn" class="language-link" data-language="in-bn" data-lang-rev="bn-in">বাংলা</a></li>
+<li class="en-in Selected"><a href="/in-en" class="language-link active" data-language="in-en" data-lang-rev="en-in">English</a></li>
+<li class="gu-in"><a href="/in-gu" class="language-link" data-language="in-gu" data-lang-rev="gu-in">ગુજરાતી</a></li>
+<li class="hi-IN"><a href="/in-hi" class="language-link" data-language="in-hi" data-lang-rev="hi-IN">हिन्दी</a></li>
+<li class="kn-in"><a href="/in-kn" class="language-link" data-language="in-kn" data-lang-rev="kn-in">ಕನ್ನಡ</a></li>
+<li class="ml-in"><a href="/in-ml" class="language-link" data-language="in-ml" data-lang-rev="ml-in">മലയാളം</a></li>
+<li class="mr-in"><a href="/in-mr" class="language-link" data-language="in-mr" data-lang-rev="mr-in">मराठी</a></li>
+<li class="ta-in"><a href="/in-ta" class="language-link" data-language="in-ta" data-lang-rev="ta-in">தமிழ்</a></li>
+<li class="te-in last"><a href="/in-te" class="language-link" data-language="in-te" data-lang-rev="te-in">తెలుగు</a></li>
+</ul></div>        </div>
+               </div>
+  </div>
+  </nav>
+<!--header end-->
+  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="node-993743 node node-landing-pages-node clearfix">
+
+  <div style="position:relative"><div id="landing-pages-content" class="single-page template-u2_global"><div id="admin-element-0" class="place-holder   div_list div_1 PagePage_-1_of_1 div_PagePage  dragable-components">
+<div class="inner-holder"><div id="admin-element-577450" class="place-holder   div_list div_11 PageRow_1_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" height:100%;
+          
+           ;background-size: cover; background-position: center center;" class="row-inner-wrapper picturefill-background-scroll"><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg?itok=PZ0jSPBC'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg?itok=PZ0jSPBC' data-media='(min-width: 300px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC' data-media='(min-width: 300px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg?itok=PZ0jSPBC' data-media='(min-width: 767px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC' data-media='(min-width: 767px)' data-type='image/webp'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg?itok=PZ0jSPBC' data-media='(min-width: 992px)'></span><span data-src='https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC' data-media='(min-width: 992px)' data-type='image/webp'></span><style>@media only screen and (max-width: 991px) { #admin-element-577450 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC);}} </style><style>@media only screen and (max-width: 766px) { #admin-element-577450 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC);}} </style><style>@media only screen and (min-width: 992px) { #admin-element-577450 .picturefill-background-scroll{background-image:url(https://www.artofliving.org/sites/www.artofliving.org/files/styles/max_width/public/1920x780%20hero%20bhajans.jpg.webp?itok=PZ0jSPBC);}} </style><div class="row-image-child"></div><div class="row-inner" ><div id="admin-element-577451" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-577478 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p style="text-align: center;" class="banner_text_p"><span style="color:#FFFFFF;"><u>Shiva</u></span></p>
+<h2 style="text-align: center;" class="banner_text"><span style="color:#FFFFFF;">The complete list of Shiva bhajans &amp; chants</span></h2>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577476" class="place-holder   div_list div_11 PageRow_2_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner iframe_sec" ><div id="admin-element-577479" class="place-holder   div_list div_2 PageColumn_1_of_2 div_PageColumn ">
+<div class="inner-holder"><div id=element-577480 class="div_html_component div_list div_2 html_component_1_of_2 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><h4>Top 5 Art of Living Shiva Bhajans</h4>
+<p class="conatiner iframe-container video_align ">
+        <div class="aspect-ratio">               
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/BYXjykjVuI4"
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/BYXjykjVuI4?autoplay=1><img  loading=lazy src=https://img.youtube.com/vi/BYXjykjVuI4/hqdefault.jpg alt='Best Shiv Bhajans : Top 5 Art of Living Shiv Bhajans | Non-stop Shiv ji Songs | शिव भजन'><span>▶</span></a>"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="Best Shiv Bhajans : Top 5 Art of Living Shiv Bhajans | Non-stop Shiv ji Songs | शिव भजन"
+          ></iframe></div></p>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577477" class="place-holder   div_list div_2 PageColumn_2_of_2 div_PageColumn ">
+<div class="inner-holder"><div id=element-577481 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><h4>Shiva Rudram chanting</h4>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QjsO4UVwsow" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/QjsO4UVwsow?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/QjsO4UVwsow/hqdefault.jpg alt='Powerful Shiva Rudram Chanting | The Art of Living Chants | Powerful Shiva Mantra | Mahashivratri'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Powerful Shiva Rudram Chanting | The Art of Living Chants | Powerful Shiva Mantra | Mahashivratri"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577474" class="place-holder   div_list div_11 PageRow_3_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577483" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577484 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><b>Bhole ki jai jai Song</b></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aDPGwKwXKQ8" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/aDPGwKwXKQ8?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/aDPGwKwXKQ8/hqdefault.jpg alt='Bhole Ki Jai Jai Song | Vikram Hazra | Art Of Living Shiva Bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Bhole Ki Jai Jai Song | Vikram Hazra | Art Of Living Shiva Bhajan"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577482" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577485 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><b>Non Stop Shiv Bhajans </b></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fVh1co-fzd0" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/fVh1co-fzd0?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/fVh1co-fzd0/hqdefault.jpg alt='Best Shiv Bhajans | MahaShivratri 2022 | Non Stop Shiv Bhajans | Art of Living'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Best Shiv Bhajans | MahaShivratri 2022 | Non Stop Shiv Bhajans | Art of Living"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577475" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577486 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Chant Om Namah Shivaya 108 times</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/qQkIiE6xNhQ" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/qQkIiE6xNhQ?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/qQkIiE6xNhQ/hqdefault.jpg alt=''&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title=""></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577472" class="place-holder   div_list div_11 PageRow_4_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577488" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577491 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Hara Hara Haraya Shiva Shankaray</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/W5vCpHUsyTg" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/W5vCpHUsyTg?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/W5vCpHUsyTg/hqdefault.jpg alt='Hara Hara Haraya Shiva Shankaraya | Dr. Manikantan | Art of Living Bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Hara Hara Haraya Shiva Shankaraya | Dr. Manikantan | Art of Living Bhajan"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577487" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577492 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shiva Tandav Stotram</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2-r-9LCrQtU" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/2-r-9LCrQtU?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/2-r-9LCrQtU/hqdefault.jpg alt='Shiva Tandava Stotram | शिवताण्डवस्तोत्रम् | Powerful Shiva Stotram | Mahashivratri 2022'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Shiva Tandava Stotram | शिवताण्डवस्तोत्रम् | Powerful Shiva Stotram | Mahashivratri 2022"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577473" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577493 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><b>Har Har Bhole Shankara</b></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/1iwiy0T9Wjk" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/1iwiy0T9Wjk?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/1iwiy0T9Wjk/hqdefault.jpg alt='Har Har Bhole Shankara | Best Shiv Bhajan | Vikram Hazra | Art Of Living Music'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Har Har Bhole Shankara | Best Shiv Bhajan | Vikram Hazra | Art Of Living Music"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577470" class="place-holder   div_list div_11 PageRow_5_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577495" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577496 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Om Namah Shivaya chanting 108 times</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CWWwvF556w8" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/CWWwvF556w8?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/CWWwvF556w8/hqdefault.jpg alt='Om Namah Shivaya - Chanting 108 Times | The Most Powerful Shiv Mantra | MahaShivratri 2022'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Om Namah Shivaya - Chanting 108 Times | The Most Powerful Shiv Mantra | MahaShivratri 2022"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577494" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577497 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><b>Shivoham</b></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kkd4mFi5R2w" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/kkd4mFi5R2w?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/kkd4mFi5R2w/hqdefault.jpg alt='Shivohum | Chitra Roy |  The Art of Living Shiva bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Shivohum | Chitra Roy |  The Art of Living Shiva bhajan"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577471" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577498 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Deva manohara</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sk0On2ewBCk" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/sk0On2ewBCk?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/sk0On2ewBCk/hqdefault.jpg alt='Deva Manohara | Shiva Bhajan By Dr. Manikantan | Sumeru Sandhya | Art of Living Shiva Bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Deva Manohara | Shiva Bhajan By Dr. Manikantan | Sumeru Sandhya | Art of Living Shiva Bhajan"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577468" class="place-holder   div_list div_11 PageRow_6_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577500" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577501 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Kalabhairavam Ashtakam</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/9WqOMhEStTw" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/9WqOMhEStTw?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/9WqOMhEStTw/hqdefault.jpg alt='Kaala Bhairava Ashtakam | Kalabhairava Ashtakam with Lyrics | Powerful Shiva Mantra'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Kaala Bhairava Ashtakam | Kalabhairava Ashtakam with Lyrics | Powerful Shiva Mantra"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577499" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577502 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Mrityunjayaaya</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vaMwDG1sUUI" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/vaMwDG1sUUI?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/vaMwDG1sUUI/hqdefault.jpg alt='Mrutyunjayaaya | Srinivas &amp; Shalini  | Art Of Living Shiva Bhajan | Mahashivratri Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Mrutyunjayaaya | Srinivas &amp; Shalini  | Art Of Living Shiva Bhajan | Mahashivratri Bhajans"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577469" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577503 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><b>Jai Jai Shiv Shambho </b></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wVLMnh8DJDE" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/wVLMnh8DJDE?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/wVLMnh8DJDE/hqdefault.jpg alt=''&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title=""></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577466" class="place-holder   div_list div_11 PageRow_7_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577505" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577506 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Sundaranana</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/84O6rU2KCUU" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/84O6rU2KCUU?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/84O6rU2KCUU/hqdefault.jpg alt='Sundaranana | Shiva bhajan | Dr. Manikantan Menon | Art Of Living Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Sundaranana | Shiva bhajan | Dr. Manikantan Menon | Art Of Living Bhajans"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577504" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577507 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Om Namah Shivaya Bhajan</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/n_kq_EtwVGI" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/n_kq_EtwVGI?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/n_kq_EtwVGI/hqdefault.jpg alt='Om Namah Shivaya Bhajan | Vikram Hazra | Art of Living Shiva Bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Om Namah Shivaya Bhajan | Vikram Hazra | Art of Living Shiva Bhajan"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577467" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577508 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shiva shiva sadha shiva</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pJ0rE2Ka_Kg" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/pJ0rE2Ka_Kg?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/pJ0rE2Ka_Kg/hqdefault.jpg alt=''&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title=""></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577464" class="place-holder   div_list div_11 PageRow_8_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577510" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577511 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Bol Bolo</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HYAlYomcOww" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/HYAlYomcOww?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/HYAlYomcOww/hqdefault.jpg alt='Bolo Bolo | Shiva Bhakthi Song | Vikram Hazra | Art Of Living Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Bolo Bolo | Shiva Bhakthi Song | Vikram Hazra | Art Of Living Bhajans"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577509" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577512 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shiv Shambho Shambhu </strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4R-IWFuu6ZA" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/4R-IWFuu6ZA?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/4R-IWFuu6ZA/hqdefault.jpg alt='Melodious Art of Living  Shiva Bhajan |Shiva Shambo Shambhu | Chitra Roy'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Melodious Art of Living  Shiva Bhajan |Shiva Shambo Shambhu | Chitra Roy"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577465" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577513 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shiva OM</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4b5g-V3UNzA" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/4b5g-V3UNzA?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/4b5g-V3UNzA/hqdefault.jpg alt='Shiva Om | Art Of Living Shiva Bhajan | Vikram Hazara'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Shiva Om | Art Of Living Shiva Bhajan | Vikram Hazara"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577462" class="place-holder   div_list div_11 PageRow_9_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577515" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577516 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shiva Om</strong></p>
+
+<p>        </p><div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JhzVg2ajj8Q" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/JhzVg2ajj8Q?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/JhzVg2ajj8Q/hqdefault.jpg alt='Shiva Om | Vikram Hazra | Art Of Living Shiva Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Shiva Om | Vikram Hazra | Art Of Living Shiva Bhajans"></iframe></div>
+</div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577514" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577517 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Bho Shambho Shiv Shambho</strong></p>
+        <div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vHHSW7vAbBU" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/vHHSW7vAbBU?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/vHHSW7vAbBU/hqdefault.jpg alt='Bho Shambho Shiv Shambho | Best Shiv Bhajan | Rahul Vellal | Mahashivratri 2022'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Bho Shambho Shiv Shambho | Best Shiv Bhajan | Rahul Vellal | Mahashivratri 2022"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577463" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577518 class="div_html_component div_list div_1 html_component_1_of_1 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Shankara</strong></p>
+        <div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/L5QfOSRxQmg" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/L5QfOSRxQmg?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/L5QfOSRxQmg/hqdefault.jpg alt='Shankara | Abhishek &amp; Adhishree | Album - Adwait | The Art of Living Shiva Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Shankara | Abhishek &amp; Adhishree | Album - Adwait | The Art of Living Shiva Bhajans"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-577460" class="place-holder   div_list div_11 PageRow_10_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-577520" class="place-holder   div_list div_3 PageColumn_1_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577521 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Har Har Bhole Shankara</strong></p>
+        <div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2p8MYN1g-sg" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/2p8MYN1g-sg?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/2p8MYN1g-sg/hqdefault.jpg alt='Har Har Bhole Shankara by Vikram Hazra | Vikram Hazra Art of Living | Shiva Bhajans'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Har Har Bhole Shankara by Vikram Hazra | Vikram Hazra Art of Living | Shiva Bhajans"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577519" class="place-holder   div_list div_3 PageColumn_2_of_3 div_PageColumn ">
+<div class="inner-holder"><div id=element-577522 class="div_html_component div_list div_3 html_component_1_of_3 page-element element-html_component ">
+<div class="html-component  " style="background: ">
+<div class="field-item even"><p><strong>Bhole Ki Jai Jai</strong></p>
+        <div class="aspect-ratio">               
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aDPGwKwXKQ8" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/aDPGwKwXKQ8?autoplay=1&gt;&lt;img  loading=lazy src=https://img.youtube.com/vi/aDPGwKwXKQ8/hqdefault.jpg alt='Bhole Ki Jai Jai Song | Vikram Hazra | Art Of Living Shiva Bhajan'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" title="Bhole Ki Jai Jai Song | Vikram Hazra | Art Of Living Shiva Bhajan"></iframe></div></div></div></div>                    
+        </div>                    
+</div>
+<div id="admin-element-577461" class="place-holder   div_list div_3 PageColumn_3_of_3 div_PageColumn ">
+<div class="inner-holder">        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-580007" class="place-holder   div_list div_11 PageRow_11_of_11 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" " class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important; '><div id="admin-element-580008" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-580009 class="div_WisdomNavigation div_list div_1 WisdomNavigation_1_of_1 page-element element-WisdomNavigation "><div class="main">
+	<span class="title"></span>
+	<div class="navigation">
+		   				
+				<div class="nav_left " style="">
+					<a href="https://www.artofliving.org/in-en/shiva">
+													<span class="arrow-circle-left"></span>				
+								
+						<span class="nav_title">
+							<u>Back to Shiva Home Page</u>						</span>
+								
+					</a>
+				</div>
+   	   				
+				<div class="nav_right bg-color" style="background-color:#FFAE02">
+					<a href="https://www.artofliving.org/in-en/shiva-articles">
+								
+						<span class="nav_title">
+							<u>Continue to Shiva articles</u>						</span>
+													<span class="arrow-circle-right"></span>				
+								
+					</a>
+				</div>
+   		</div>
+</div></div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+        </div>                    
+</div>
+</div></div>
+</div><!-- /.node -->
+  </div>
+</div>
+  </div>
+
+<div id="landing-pages-content" class="single-page template-u2_global"><div id="admin-element-0" class="place-holder   div_list div_1 PagePage_-1_of_1 div_PagePage  dragable-components">
+<div class="inner-holder"><div id="admin-element-652575" class="place-holder   div_list div_3 PageRow_1_of_3 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" background-color: #F7F5EF;" class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important;  padding-bottom: 0px !important; '><div id="admin-element-652578" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-652595 class="div_FooterMenuLinksComponent div_list div_1 FooterMenuLinksComponent_1_of_1 page-element element-FooterMenuLinksComponent "><div class="row-inner-wrapper footer-menu-links">
+    <div class="container">
+        <div class="footer_main_icon image">
+                    </div>
+        <div class="row-container-wrap collapse">
+            <div class="row-title-wrap tcolpse">
+                <h2 class="row-title">The Art of Living programs</h2>
+            </div>
+            <h3 class="row-title">Find health and happiness with our flagship programs</h3>
+                        <div id="fmlParent" class="web-wid-12 pad-0 unity_footer_main ">
+                                <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  href=https://www.artofliving.org/in-en/programs/introtalk-breath-yoga-meditation >
+                            MOST POPULAR                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/programs/introtalk-breath-yoga-meditation">The Art of Living Free IntroTalk</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/online-meditation-breath-workshop">Online meditation &amp; Breath Workshop</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/sahaj-samadhi-dhyana-yoga">Sahaj Samadhi Dhyana Yoga</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/workshop-for-anxiety-relief-better-sleep">Workshop to Get Rid of Anxiety &amp; Sleep Disorder</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wellness-program">Wellness Program</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Advanced Programs                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/advanced-meditation-program">Advanced Meditation Program</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/dynamism-for-self-and-nation-dsn">Dynamism for Self &amp; Nation (DSN)</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/blessings-program">The Blessing Program</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Learn Yoga                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/sri-sri-yoga">Sri Sri Yoga Level 1</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/sri-sri-yoga-level-2">Sri Sri Yoga Level 2</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/beginners/corporate-yoga">Corporate Yoga</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            For Parents & Children                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/know-your-teen-workshop">Online Know Your Child and Online Know Your Teen Workshop</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/children-teens-intuition-process">Intuition process (8 to 18)</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/children-teens/utkarsha-yoga">Online Utkarsha Yoga (8 to 13)</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/children-teens-medha-yoga-level-1">Online Medha Yoga Level 1 (13 to 18)</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Training                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/teachers-training-program">Art of Living Teacher Training</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/sri-sri-yoga-teacher-training">Sri Sri Yoga Teacher Training Program</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/karma-yoga">Karma Yoga Youth Leadership Training Program</a>
+                                </div>
+                        </div>
+        </div>
+    </div>
+</div>
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-652557" class="place-holder   div_list div_3 PageRow_2_of_3 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" background-color: #ededed;" class="row-inner-wrapper bg-grey bg-color theme-common-bg"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important;  padding-bottom: 0px !important; '><div id="admin-element-652562" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-652593 class="div_FooterMenuLinksComponent div_list div_1 FooterMenuLinksComponent_1_of_1 page-element element-FooterMenuLinksComponent "><div class="row-inner-wrapper footer-menu-links">
+    <div class="container">
+        <div class="footer_main_icon image">
+                    </div>
+        <div class="row-container-wrap collapse">
+            <div class="row-title-wrap tcolpse">
+                <h2 class="row-title">Find a solution</h2>
+            </div>
+            <h3 class="row-title">Start your healing journey with these insightful reads.	</h3>
+                        <div id="fmlParent" class="web-wid-12 pad-0 unity_footer_main fml_cols_per_row_4">
+                                <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Emotional                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/beginners/meditation-and-insomnia">Insomnia &amp; Sleep</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/benefits/how-to-control-anger">How To Control Anger</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/overcome-anxiety-disorder-with-yoga">Overcome Anxiety &amp; Depression</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/how-love-can-remove-fear">How to Stop Worrying</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/how-love-can-remove-fear">How To Overcome Fear</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/meditation-for-you/how-to-concentrate-on-studies">How To Improve Concentration</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/benefits/get-rid-of-headache">How to get Rid of Headache</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Physical                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/yoga-for-weight-loss">How To Lose Weight</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/about-us/sudarshan-kriya/benefits-of-sudarshan-kriya">99 Benefits of Sudarshan Kriya</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/back-pain-relief-quickly">Yoga for Back Pain Relief Quickly</a>
+                                    <a class="" href="https://artofliving.org/in-en/yoga/yoga-sequences-for/yoga-for-high-blood-pressure">Yoga for High Blood Pressure</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/ayurveda/tips/right-sleeping-directions-for-better-rest">Best Directions To Sleep Scientifically</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/yoga-exercises-to-improve-eyesight">Yoga For Eyes</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/ayurveda/remedies/pitta-imbalance-manage">Remedies to Balance Pitta Dosha Naturally</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Spiritual                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/benefits/secret-of-third-eye-activation">Secrets of Third Eye Activation</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/guided/online-guided-meditation">Guided Meditations</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/beginners/beginner-yoga-asanas-for-everyday">Yoga Poses and Asanas</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-poses/sun-salutation">Surya Namaskar: How to do Surya Namaskar</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/beginners/sun-salutation-benefits">Benefits of Surya Namaskar</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/sukshma-yoga-exercises">Sukshma Yoga Exercises</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/pranayama/nadi-shodhan-alternate-nostril-breathing">Nadi Shodhan Pranayama</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Social                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/6-ways-make-your-relationships-stronger">How to make Relationships Stronger</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/theme/what-freedom">What is Freedom?</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/change-the-way-you-see-the-world">Change the way you see World</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/theme/secrets-of-a-happy-relationship">Secrets of Happy Reationships</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/ego-kills-relationship">How ego kills relationships</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/attachment-in-relationship">Is attachment healthy in a relationship?</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/children-teens/parenting/life-hacks/5-tips-to-know-your-child-better">5 Tips to raise your child</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Intellectual                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/benefits/how-to-stop-overthinking">How To Stop Overthinking</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/power-of-subconscious-mind">Power Of Subconscious Mind</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/super-brain-yoga-to-boost-gray-matter">Super Brain Yoga Exercises</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/meditation/benefits/7-chakras-significance-and-how-to-balance-them">7 Chakras In Human Body Explained &amp; How to Balance Them</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/beginners/powerful-yoga-mudra-at-your-fingertips">Most Powerful Yoga Mudras</a>
+                                    <a class="" href="https://www.artofliving.org/mahashivratri/who-is-lord-shiva">Who Is Shiva</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/success/8-keys-to-stop-procrastinating">How to Stop Procrastination</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Professional                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/tips/personality-development">Personality Development</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/life-hacks/6-guidelines-on-how-to-achieve-your-goals">How to Achieve your goals</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/youth/one-thing-need-for-success">One thing you need for Success</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/theme/management-mantras-for-success">Management mantras for success</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/theme/10-qualities-effective-leader">10 Qualitites of a Leader</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/how-to-communicate-effectively">10 Steps to improve communication skills</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/off-yoga-mat/yoga-office">Yoga in the Office</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Financial                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/life-hacks/can-money-buy-happiness">Can money buy happiness?</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/reads/the-six-kinds-of-wealth-shat-sampathi">The 6 kinds of Wealth</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/work-life-balance-helpful-tips-how-even-out-your-lopsided-seesaw">Work-Life balance</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/ethics-and-technological-revolution-4-ways-keep-human-factor-alive">Ethics and the Technological Revolution</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/5-tips-how-be-more-productive-improve-focus-using-your-breath">5 Tips on How to Be More Productive</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/wisdom/manage-desire">What is desire and how to manage them?</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Environment                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/tips/remove-negative-energy-from-home">Remove Negative Energy From Home</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/yoga/yoga-sequences-for/effective-asanas-pranayama-to-reduce-hair-fall">Yoga for Hair Loss</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/lifestyle/tips/know-about-brahma-muhurta">What is Brahma Muhurta</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/parenting/reads/how-to-deal-with-your-teenager">How to Deal with Teenagers for Happy Family</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/knowledge-sheets/10-steps">10 Steps to Happiness</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/projects/environmental-sustainability/natural-farming/natural-farming-brings-commander-back-home">Natural Farming: Stories of Change</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/stories-of-change/start-green-revolution">How to start Green Revolution</a>
+                                </div>
+                        </div>
+        </div>
+    </div>
+</div>
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+<div id="admin-element-652497" class="place-holder   div_list div_3 PageRow_3_of_3 div_PageRow  dragable-components">
+<div class="inner-holder"><div  style=" background-color: #F7F5EF;" class="row-inner-wrapper"><div class="row-image-child"></div><div class="row-inner" style=' padding-top: 0px !important;  padding-bottom: 0px !important; '><div id="admin-element-652498" class="place-holder   div_list div_1 PageColumn_1_of_1 div_PageColumn ">
+<div class="inner-holder"><div id=element-652718 class="div_FooterMenuLinksComponent div_list div_1 FooterMenuLinksComponent_1_of_1 page-element element-FooterMenuLinksComponent "><div class="row-inner-wrapper footer-menu-links">
+    <div class="container">
+        <div class="footer_main_icon image">
+                    </div>
+        <div class="row-container-wrap collapse">
+            <div class="row-title-wrap tcolpse">
+                <h2 class="row-title">Ashrams and Temples of Knowledge in India</h2>
+            </div>
+            <h3 class="row-title">Find a center in locations across the country.</h3>
+                        <div id="fmlParent" class="web-wid-12 pad-0 unity_footer_main ">
+                                <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            South India                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/hyderabad">Hyderabad</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/bangalore">Bangalore</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/chennai">Chennai</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/cochin">Kochi</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            North India                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/new-delhi">New Delhi</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/gurgaon">Gurgaon</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/chandigarh">Chandigarh</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/jaipur">Jaipur</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/agra">Agra</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/noida">Noida</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            East India                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/kolkata-north-information-center">Kolkata</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/bhubaneshwar">Bhubaneshwar</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/guwahati">Guwahati</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/siliguri">Siliguri</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/ranchi">Ranchi</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/patna">Patna</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/imphal">Imphal</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            West India                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/ahmedabad">Ahmedabad</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/mumbai">Mumbai</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/nashik">Nashik</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/nagpur">Nagpur</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/pune">Pune</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/surat">Surat</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/baroda">Baroda</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Central India                        </a>
+                    </h4>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/raipur">Raipur</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/bhopal">Bhopal</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/indore">Indore</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/lucknow">Lucknow</a>
+                                </div>
+                            <div class="footer-nav collapse">
+                    <h4 id='fml' class="black">
+                        <div class="footer_col_icon image">
+                                                    </div>
+                        <a class="item-primary no-link"  >
+                            Ashrams & Center                        </a>
+                    </h4>
+                                    <a class="" href="https://bangaloreashram.org/">The Art of Living International Center Bangalore</a>
+                                    <a class="" href="https://www.artofliving.org/triveni-ashram">Triveni Ashram Pune</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/rishikesh-ashram">Rishikesh, Uttrakhand</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/guwahati-ashram">Guwahati, Assam</a>
+                                    <a class="" href="https://www.artofliving.org/in-en/centers/manas-ganga-ashram">Hyderabad, Andhra Pradesh</a>
+                                    <a class="" href="https://www.artoflivingmysoreashram.org/">Mysore Ashram</a>
+                                </div>
+                        </div>
+        </div>
+    </div>
+</div>
+</div>                    
+        </div>                    
+</div>
+    </div><div class="clearfix"> </div></div>    </div>                    
+</div>
+        </div>                    
+</div>
+</div><!--footer-->
+<div class="mobile-12 footerhome custom-social-icon-footer extra-footer">
+  <div class="container">
+    <div class="web-inp-4 bod pad-0 hidden-xs">
+      <div class="mobile-12 pad-0">
+                <section class="left_sec">
+                          <h4 class="social_media-first-title">find us on </h4>
+              <div class="social_media_icons">
+
+                            <div class="app_store">
+                                        <a href="https://twitter.com/artofliving" class="social_media-twitter">
+                          <img src="/sites/all/themes/unity2/img/icon/x_logo.png" alt="Twitter" loading="lazy">
+                          <!-- <span class="twitter_icon icon"></span> -->
+                      </a>
+                  
+                                        <a href="https://www.facebook.com/TheArtOfLivingGlobal" class="social_media-facebook">
+                          <img src="/sites/all/themes/unity2/img/icon/facebook_new.png" alt="Facebook" loading="lazy">
+                          <!-- <span class="fb_icon icon"></span> -->
+                      </a>
+                                                          <a href="https://www.youtube.com/artofliving" class="social_media-youtube">
+                          <img src="/sites/all/themes/unity2/img/icon/Youtube_new.png" alt="Youtube" loading="lazy">
+                          <!-- <span class="youtube_icon icon"></span> -->
+                      </a>
+                  
+                                        <a href="https://www.instagram.com/artofliving" class="social_media-insta" >
+                          <img src="/sites/all/themes/unity2/img/icon/insta_new.png" alt="Instagram" loading="lazy">
+                          <!-- <span class="insta_icon icon"></span> -->
+                      </a>
+                  
+                                        <a href="https://www.linkedin.com/in/srisriravishankar" class="social_media-linkedin">
+                          <img src="/sites/all/themes/unity2/img/icon/linkdin_new.png" alt="Linkedin" loading="lazy">
+                          <!-- <span class="linkedin_icon icon"></span> -->
+                      </a>
+                                </div>
+                            </div>
+              <h4 class="social_media-second-title">get the art of living app</h4>
+              <div class="app_store_group">
+                  <div class="app_store">
+                  <a href="https://play.google.com/store/apps/details?id=com.sspt.aol&hl=en" target="_blank" rel="external" class="social_media-store-icon-wrapper">
+                                         <img src="/sites/all/themes/unity2/img/icon/google_play_new.png" alt="Google Play store" loading="lazy">
+                      <!-- <span class="playstore_icon store_icon"></span> -->
+                    </a>
+                  </div>
+                  <div class="app_store">
+                      <a href="https://apps.apple.com/in/app/the-art-of-living/id1234160250" target="_blank" rel="external" class="social_media-store-icon-wrapper">
+                        <img src="/sites/all/themes/unity2/img/icon/app_store_new.png" alt="Apps Store" loading="lazy">
+                      <!-- <span class="appstore_icon store_icon"></span> -->
+                    </a>
+                  </div>
+
+              </div>
+              <p class="social_media-first-paragraph">
+                <a href="https://www.elyments.com/" target="_blank" rel="external">
+                      Elyments - Our Social Media App
+                    </a> <br><a href="https://www.artoflivingshop.com/" target="_blank" rel="external">
+                      Art Of Living Shop
+                    </a></p>
+                            <div class="footet_search_main">
+                    <div class="search_input"><input type="text" id="footer_universal_search" placeholder="Search the site" ></div>
+                    <div class="search_btn"><button class="footer_universal_search"> search </button></div>
+                </div>
+                      </section>
+      </div>
+    </div>
+
+    <div class="web-wid-8 pad-0 unity_footer_main">
+      <div class="mobile-12 pad-0 unity_footer">        
+        <div class="mobile-12 pad-0 unity_footer_left">
+          <div class="unity_mobile_footer_main">
+            <ul class="unity_mobile_footer"></ul>
+          </div>
+    			          
+          <span class="footer_call_tab">Contact us<a href="tel:+918067612360" class="track_call">+91-80-67612360</a></span>
+        </div> 
+        <div class="mobile-12 pad-0 unity_footer_right">
+          <div class="footer_right_head"><span>main menu</span></div>
+          <div class="unity_footer_right_left">
+                                <div class=" footer-nav collapse">
+                                    
+                  <h4 class="black"><a class="item-primary no-link" >QUICK LINKS</a></h4>
+  <a href="https://www.artofliving.org/mahashivratri" class="" data-text="Mahashivratri" title="Mahashivratri" target="_blank">Mahashivratri</a><a href="https://www.artofliving.org/navratri" class="" data-text="Navratri" title="Navratri" target="_blank">Navratri</a><a href="https://www.artofliving.org/in-en/coronavirus" class="" data-text="Coronavirus" title="Coronavirus" target="_blank">Coronavirus</a>                                    </div>
+                                  <div class=" footer-nav collapse">
+                                    
+                  <h4 class="black"><a class="item-primary no-link" >ABOUT US</a></h4>
+  <a href="https://www.artofliving.org/in-en/about-us" class="" data-text="About us " title="About us " target="_blank">About us </a><a href="https://www.artofliving.org/in-en/programs" class="" data-text="The Art of Living Programs " title="The Art of Living Programs " target="_blank">The Art of Living Programs </a><a href="https://www.artofliving.org/in-en/projects" class="" data-text="Social Projects" title="Social Projects" target="_blank">Social Projects</a><a href="https://www.artofliving.org/in-en/events" class="" data-text="Events" title="Events" target="_blank">Events</a><a href="https://www.artofliving.org/in-en/news-room" class="" data-text="In the Press" title="In the Press" target="_blank">In the Press</a><a href="https://www.artofliving.org/in-en/research-sudarshan-kriya" class="" data-text="Research" title="Research" target="_blank">Research</a>                                    </div>
+                                  <div class=" footer-nav collapse">
+                                    
+                  <h4 class="black"><a class="item-primary no-link" >OUR FOUNDER</a></h4>
+  <a href="https://www.artofliving.org/in-en/srisri" class="" data-text="Gurudev Sri Sri Ravi Shankar" title="Gurudev Sri Sri Ravi Shankar" target="_blank">Gurudev Sri Sri Ravi Shankar</a><a href="https://www.artofliving.org/in-en/biography" class="" data-text="Biography " title="Biography " target="_blank">Biography </a><a href="https://www.artofliving.org/in-en/awards-and-honors-sri-sri-ravi-shankar" class="" data-text="Awards &amp; Honors " title="Awards &amp; Honors " target="_blank">Awards &amp; Honors </a><a href="https://www.artofliving.org/in-en/srisriontour" class="" data-text="Tour Schedule" title="Tour Schedule" target="_blank">Tour Schedule</a><a href="https://www.artofliving.org/in-en/wisdom" class="" data-text="Wisdom from Gurudev" title="Wisdom from Gurudev" target="_blank">Wisdom from Gurudev</a><a href="https://www.instagram.com/srisriravishankar" class="" data-text="Gurudev on Instagram" title="Gurudev on Instagram" target="_blank">Gurudev on Instagram</a><a href="https://www.youtube.com/channel/UC4qz5w2M-Xmju7WC9ynqRtw" class="" data-text="Gurudev on Youtube" title="Gurudev on Youtube" target="_blank">Gurudev on Youtube</a><a href="https://twitter.com/SriSri" class="" data-text="Gurudev on X" title="Gurudev on X" target="_blank">Gurudev on X</a>                                    </div>
+                                  <div class=" footer-nav collapse">
+                                    
+                  <h4 class="black"><a class="item-primary no-link" >ABOUT THE ART OF LIVING</a></h4>
+  
+
+        <div class="quote-text"><p>
+    Operating in 180 countries, The Art of Living is a non-profit, educational and humanitarian organization founded in 1981 by the world-renowned humanitarian and spiritual teacher, Gurudev Sri Sri Ravi Shankar whose vision is a stress-free and violence-free world.     </p>
+  </div>                                    </div>
+                          </div>
+          
+          
+                    <div class="unity_footer_social">
+            <section class="left_sec">
+              <h4 class="social_media-first-title">find us on</h4>
+              <div class="social_media_icons">
+                                        <div class="app_store">
+                                                        <a href="https://twitter.com/artofliving" class="social_media-twitter">
+                                  <img src="/sites/all/themes/unity2/img/icon/x_logo.png" alt="Twitter" loading="lazy">
+                                  <!-- <span class="twitter_icon icon"></span> -->
+                              </a>
+                          
+                                                        <a href="https://www.facebook.com/TheArtOfLivingGlobal" class="social_media-facebook">
+                                  <img src="/sites/all/themes/unity2/img/icon/facebook_new.png" alt="Facebook" loading="lazy">
+                                  <!-- <span class="fb_icon icon"></span> -->
+                              </a>
+                                                                                  <a href="https://www.youtube.com/artofliving" class="social_media-youtube">
+                                  <img src="/sites/all/themes/unity2/img/icon/Youtube_new.png" alt="Youtube" loading="lazy">
+                                  <!-- <span class="youtube_icon icon"></span> -->
+                              </a>
+                          
+                                                        <a href="https://www.instagram.com/artofliving" class="social_media-insta">
+                                  <img src="/sites/all/themes/unity2/img/icon/insta_new.png" alt="Instagram" loading="lazy">
+                                  <!-- <span class="insta_icon icon"></span> -->
+                              </a>
+                                                                                  <a href="https://www.linkedin.com/in/srisriravishankar" class="social_media-linkedin">
+                                  <img src="/sites/all/themes/unity2/img/icon/linkdin_new.png" alt="Linkedin" loading="lazy">
+                                  <!-- <span class="linkedin_icon icon"></span> -->
+                              </a>
+                                                </div>
+                  
+              </div>
+              <h4 class="social_media-second-title">get the art of living app</h4>
+                <div class="app_store_group">
+                  <div class="app_store">
+                      <a href="https://apps.apple.com/in/app/the-art-of-living/id1234160250" target="_blank" rel="external" class="social_media-store-icon-wrapper">
+                          <!-- <span class="appstore_icon store_icon"></span> -->
+                          <img src="/sites/all/themes/unity2/img/icon/google_play_new.png" alt="Google Play store" loading="lazy">
+                      </a>
+    <!--                    <a href="#" target="_blank" rel="external"><img src="" alt="Google Play store">-->
+    <!--                    <img src="" alt=""></a>-->
+                  </div>
+                  <div class="app_store">
+                      <a href="https://play.google.com/store/apps/details?id=com.sspt.aol&hl=en" target="_blank" rel="external" alt="Apps Store" class="social_media-store-icon-wrapper">
+                          <!-- <span class="playstore_icon store_icon"></span> -->
+                          <img src="/sites/all/themes/unity2/img/icon/app_store_new.png" alt="Apps Store" loading="lazy">                          
+                      </a>
+    <!--                  <a href="#" target="_blank" rel="external"><img src="" alt="Apps Store">-->
+    <!--                  <img src="" alt=""></a>-->
+                  </div>
+                </div>
+
+              <p class="social_media-first-paragraph"><a href="https://www.elyments.com/" target="_blank" rel="external">
+                      Elyments - Our Social Media App
+                    </a> <br><a href="https://www.artoflivingshop.com/" target="_blank" rel="external">
+                      Art Of Living Shop
+                    </a></p>
+                                    <div class="footet_search_main">
+                        <div class="search_input"><input type="text" id="footer_universal_search" placeholder="Search the site" ></div>
+                        <div class="search_btn"><button class="footer_universal_search"> search </button></div>
+                    </div>
+                          </section>
+          </div>
+
+        </div>
+        <!--only mobile end-->
+      </div>
+      
+      <div class="mobile-12 pad-0 hidden-xs fml-india-footer">
+                    <div class=" footer-nav">
+                        
+            <h4 class="black"><a class="item-primary no-link" >QUICK LINKS</a></h4>
+  <a href="https://www.artofliving.org/mahashivratri" class="" data-text="Mahashivratri" title="Mahashivratri" target="_blank">Mahashivratri</a><a href="https://www.artofliving.org/navratri" class="" data-text="Navratri" title="Navratri" target="_blank">Navratri</a><a href="https://www.artofliving.org/in-en/coronavirus" class="" data-text="Coronavirus" title="Coronavirus" target="_blank">Coronavirus</a>                        </div>
+                      <div class=" footer-nav">
+                        
+            <h4 class="black"><a class="item-primary no-link" >ABOUT US</a></h4>
+  <a href="https://www.artofliving.org/in-en/about-us" class="" data-text="About us " title="About us " target="_blank">About us </a><a href="https://www.artofliving.org/in-en/programs" class="" data-text="The Art of Living Programs " title="The Art of Living Programs " target="_blank">The Art of Living Programs </a><a href="https://www.artofliving.org/in-en/projects" class="" data-text="Social Projects" title="Social Projects" target="_blank">Social Projects</a><a href="https://www.artofliving.org/in-en/events" class="" data-text="Events" title="Events" target="_blank">Events</a><a href="https://www.artofliving.org/in-en/news-room" class="" data-text="In the Press" title="In the Press" target="_blank">In the Press</a><a href="https://www.artofliving.org/in-en/research-sudarshan-kriya" class="" data-text="Research" title="Research" target="_blank">Research</a>                        </div>
+                      <div class=" footer-nav">
+                        
+            <h4 class="black"><a class="item-primary no-link" >OUR FOUNDER</a></h4>
+  <a href="https://www.artofliving.org/in-en/srisri" class="" data-text="Gurudev Sri Sri Ravi Shankar" title="Gurudev Sri Sri Ravi Shankar" target="_blank">Gurudev Sri Sri Ravi Shankar</a><a href="https://www.artofliving.org/in-en/biography" class="" data-text="Biography " title="Biography " target="_blank">Biography </a><a href="https://www.artofliving.org/in-en/awards-and-honors-sri-sri-ravi-shankar" class="" data-text="Awards &amp; Honors " title="Awards &amp; Honors " target="_blank">Awards &amp; Honors </a><a href="https://www.artofliving.org/in-en/srisriontour" class="" data-text="Tour Schedule" title="Tour Schedule" target="_blank">Tour Schedule</a><a href="https://www.artofliving.org/in-en/wisdom" class="" data-text="Wisdom from Gurudev" title="Wisdom from Gurudev" target="_blank">Wisdom from Gurudev</a><a href="https://www.instagram.com/srisriravishankar" class="" data-text="Gurudev on Instagram" title="Gurudev on Instagram" target="_blank">Gurudev on Instagram</a><a href="https://www.youtube.com/channel/UC4qz5w2M-Xmju7WC9ynqRtw" class="" data-text="Gurudev on Youtube" title="Gurudev on Youtube" target="_blank">Gurudev on Youtube</a><a href="https://twitter.com/SriSri" class="" data-text="Gurudev on X" title="Gurudev on X" target="_blank">Gurudev on X</a>                        </div>
+                      <div class=" footer-nav">
+                        
+            <h4 class="black"><a class="item-primary no-link" >ABOUT THE ART OF LIVING</a></h4>
+  
+
+        <div class="quote-text"><p>
+    Operating in 180 countries, The Art of Living is a non-profit, educational and humanitarian organization founded in 1981 by the world-renowned humanitarian and spiritual teacher, Gurudev Sri Sri Ravi Shankar whose vision is a stress-free and violence-free world.     </p>
+  </div>                        </div>
+                  
+      </div>
+        
+                </div>
+  </div>
+    <!--<img src="sites/all/themes/unity2/img/banners/footer.png" class="footer_banner unity_footer" />-->
+  
+  <div class="row">
+    <div class="container copyright_footer">
+      <div class="mobile-12 mar-t-30 pad-0 copyright">
+        <div class="mob-f-l pad-0 ">&copy; 2024 Art of Living </div>
+        <div class="mob-f-r pad-0">
+        	                    <a href="https://www.artofliving.org/in-en/privacy-policy" target="_blank">privacy policy</a> 
+          <a href="/in-en/cookie-policy" target="_blank">cookie policy</a>          <a href="https://www.artofliving.org/in-en/terms-of-use" target="_blank">terms of use</a>                      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer end-->
+
+
+
+      <script type="js-postload"   defer="defer">
+var show_popups = window.location.href.indexOf("/in-en/ombw") == -1 && window.location.href.indexOf("in-en/children-teens/summer-fun-2022") == -1 && window.location.href.indexOf("in-en/program/10049676") == -1 && window.location.href.indexOf("in-en/landing-pages/introtalk-breath-yoga-meditation") == -1 && window.location.href.indexOf("in-en/intro-talk-sb") == -1  && window.location.href.indexOf("/in-en/program/10049703") == -1 && window.location.href.indexOf("/in-en/landing-pages/") == -1 && window.location.href.indexOf("/in-en/programs/happiness-program-special-events") == -1 && window.location.href.indexOf("artofliving.org/in-en/t/") == -1 && window.location.href.indexOf("indiameditates.artofliving.org") == -1 && window.location.href.indexOf("www.artofliving.org/in-en/india-meditates") == -1 &&  window.location.href.indexOf("/in-en/hgd-participationcertificate") == -1;
+(function(document, window,  $) {
+if(false && window.innerWidth < 768 && show_popups){
+$("body").append('<a href="https://www.konverse.ai/" id="konverse-ref-id" data-bot-id="916366575826" title="AI Chatbot on WhatsApp, Website & Messenger" data-message="hi" style="display:none">Art of Living Programs</a>');
+  $( window ).on("scroll.konv", function() {
+        konverse_bar();
+    $(this).off('scroll.konv');
+  });
+
+} else {
+if (false && show_popups) {
+$("body").append('<a href="https://www.konverse.ai/" id="konverse-ref-id" data-bot-id="552AEA8BB8653" title="AI Chatbot on WhatsApp, Website & Messenger" style="display:none">Art of Living Programs</a>');
+$( window ).on("scroll.konv", function() {
+        konverse_bar_desktop();
+    $(this).off('scroll.konv');
+});
+}
+}
+  function konverse_bar_desktop(){
+    var files = [
+      {type:"file", url: "https://app.konverse.ai/static_assets/konverse.js"},
+    ];
+     $.getMultiScripts(files).done(function() {
+
+    });
+  }
+  
+  function konverse_bar(){
+    var files = [
+      {type:"file", url: "https://chat.konverse.ai/whatsapp.js"},
+    ];
+     $.getMultiScripts(files).done(function() {
+        var checkExist = setInterval(function() {
+if (document.querySelector('.konverse-whatsapp img'))
+{ document.querySelector(".konverse-whatsapp img").src="https://chatbot-file-uploads.s3.amazonaws.com/917829922064/1603119599808_1021px-WhatsApp.svg.png"; clearInterval(checkExist); }
+}, 100);
+    });
+  }
+})(document, window, jQuery);</script>
+
+<script type="js-postload" defer="defer">(function(document, window,  $) {
+if (show_popups)
+  $( window ).on("scroll.helobar", function() {
+    setTimeout(hello_bar(), 3000)
+    $(this).off('scroll.helobar');
+  });
+  function hello_bar(){
+    var files = [
+      {type:"file", url: "https://my.hellobar.com/a755eea20a1d0861560590b25076ee85c65eb207.js"},
+    ];
+     $.getMultiScripts(files).done(function() {
+     console.log("hellobar done");
+    });
+  }
+})(document, window, jQuery);</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 10788350546 -->
+<script type="js-postload" defer="defer">
+(function(w,d,s,l,i, $){
+  var tagLoaded2 = false, tagTimeout2;
+function loadTagManager2() {
+  if (false == tagLoaded2) {
+    tagLoaded2 = true;
+    clearTimeout(tagTimeout2);
+    
+    var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src= 'https://www.googletagmanager.com/gtag/js?id='+i;
+    f.parentNode.insertBefore(j,f);
+    
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'AW-10788350546');
+  }
+}
+$( window ).on("scroll.tagmanagerload2", function() {
+  loadTagManager2();          
+  console.log("google scroll 2");    
+  $(this).off('scroll.tagmanagerload2');
+});
+$( document ).ready(function() {
+  tagTimeout2 = setTimeout(function(){
+    console.log("google timeout 2");
+    $(this).off('scroll.tagmanagerload2');
+    loadTagManager2();      
+   }, 10000);
+          
+});
+
+})(window,document,'script','','AW-10788350546', jQuery);</script><script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "The Art of Living",
+        "url": "https://www.artofliving.org",
+        "logo": "https://www.artofliving.org/sites/www.artofliving.org/files/images/logo/logo-2x-cropped.png",
+        "sameAs": [
+            "https://www.facebook.com/ArtofLiving/",
+            "https://twitter.com/artofliving",
+            "https://www.instagram.com/artofliving/",
+            "https://www.youtube.com/user/artoflivingsatsang"
+        ]
+    }
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery-extend-3.4.0.2.2.4.min.js?v=2.2.4"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery-html-prefilter-3.5.0-backport.2.2.4.min.js?v=2.2.4"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.cookie.67fb34f6a866c40d0570.min.js?v=67fb34f6a866c40d0570"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.nyroModal.custom.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/ajax.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/en-in_ubO56b-JbyP2sTfgo50ccyhXJOo1T-VHcssRDvMOp2o.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/country_locator.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/multiscript.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/aol-custom-tabs.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/universal_search_en-in.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/aol_leads.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.validate.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/functions.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/u_argentina.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/header_component.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.json-2.4.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/picturefill.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/html_component.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/picturefill-background.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/select_or_other.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/sticky_column.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/universal_search_open.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/api_geo_search.unity_ux.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.menu-aim.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.cycle2.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.cycle2.center.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.cycle2.swipe.min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/field_slideshow.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/underscore-min.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/nyro_load.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/autocomplete.7.91.min.js?v=7.91"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/footer_menu_links_component.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.mapbox.geocoder.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/geo_search.helpers.min.js?s7105h"></script>
+<script type="js-postload" defer="defer">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function () { jQuery("[type='css-postload']").attr("type", "text/css") });
+//--><!]]>
+</script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/clientside_validation.ie8.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/clientside_validation.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/script.min.js?s7105h"></script>
+<script type="js-postload" defer="defer" src="https://www.artofliving.org/sites/www.artofliving.org/files/minify/jquery.sidr.min.min.js?s7105h"></script>
+<script type="js-postload">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"in-en\/","setHasJsCookie":0,"ajaxPageState":{"theme":"unity2","theme_token":"YfdVHMjQ4ne9zhIbIHcyZ5Uu1pJ45TYwReMFDENR1ns"},"aol":{"country_locator":{"country_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/countries_en.js","continent_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/selected_continent2.js","center_js":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator\/center_in.js","public_path":"https:\/\/www.artofliving.org\/sites\/www.artofliving.org\/files\/country_locator"},"country":"in","content_api":"https:\/\/unity.artofliving.org\/content","all_result_url":"\/in-en\/search-results","article_result_url":"\/in-en\/search-articles","prefix":"in-en","no_map":true,"language":"en","country_languages":["en-in","hi-IN","te-in","kn-in","mr-in","ta-in","gu-in","ml-in","bn-in","ur-in"],"full_language":"en-in","real_country":"in","is_ashram":null,"country_name":"India","show_all_centers":0,"course_path":"\/in-en\/course-search\/ajax","date_separator":"-","show_year":1,"dont_show_courses_afr_starts":0,"current_result_limit":25,"replace_smart_search":0,"replace_universal_search":1,"mapbox_token":"pk.eyJ1IjoiYXJ0b2ZsaXZpbmciLCJhIjoiY2pzYmcwcHRrMGE2MjQ0bWx4amZrYWViaSJ9.NzokMCgsH55e1D7c8Lrrrg","use_mapbox_autocomplete":1,"order_centers_by_weight":false,"order_centers_by_title":false,"geolocation_default_city":1,"hide_centers_frm_smart_sea":0,"hide_center_frm_course_sea":1,"use_miles":0,"default_course_distance":"50","taxonomy":[]},"landing_pages":{"url":"Shiva-Bhajans-and-Chants","node":1,"l_id":"0"},"clientsideValidation":{"general":{"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}}}});
+//--><!]]>
+</script>
+  
+<script type="text/javascript">
+    if (!document.body.classList.contains("page-page")) {
+      var was = false;
+      if (document.querySelector(".nav >li > a[href='"+ window.location.pathname +"']") != null) {
+        // document.querySelector(".nav >li > a[href='"+ window.location.pathname +"']").parent().classList.add("mobile_menu_active menu_active");
+          var a = document.querySelectorAll(".nav >li > a[href='"+ window.location.pathname +"']");
+          
+          for(var i = 0; i < a.length; i++) {
+              a[i].parentNode.classList.add('mobile_menu_active');
+              a[i].parentNode.classList.add('menu_active');
+              was = true;
+          }
+      }
+      else if(document.querySelector(".nav a[href='"+ window.location.pathname +"']") != null) {
+        document.querySelector(".nav a[href='"+ window.location.pathname +"']").classList.add('active');
+          var a = document.querySelectorAll(".nav a[href='"+ window.location.pathname +"']");
+          for(var i = 0; i < a.length; i++) {
+              a[i].closest('.sub-menu').parentNode.classList.add('mobile_menu_active');
+              a[i].closest('.sub-menu').parentNode.classList.add('menu_active');
+              was = true;
+          }
+        // document.querySelector(".nav a[href='"+ window.location.pathname +"']")
+        // .closest('.sub-menu').parent().classList.add("mobile_menu_active menu_active");
+        document.querySelector("nav").classList.add("submenu-active");
+      } else if(typeof node_taxonomy != 'undefined'){
+        node_taxonomy.forEach(function(f) { 
+          if (null != document.querySelector("[data-tids*='" + f + "']")) {
+          	document.querySelector("[data-tids*='" + f + "']").classList.add("mobile_menu_active", "menu_active");
+          	was = true;
+          }
+        });
+      }
+      if (was) {
+      	document.querySelector("nav").classList.add("nav-bar-fixed");
+      }
+    }
+</script>
+</body>
+</html>
